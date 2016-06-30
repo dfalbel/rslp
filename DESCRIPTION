@@ -15,4 +15,5 @@ Imports:
     magrittr
 Suggests:
     dplyr,
-    testthat
+    testthat,
+    covr
