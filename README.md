@@ -7,7 +7,7 @@ RSLP
 
 This package uses the algorithm *Stemming Algorithm for the Portuguese Language* described in [this article](http://homes.dcc.ufba.br/~dclaro/download/mate04/Artigo%20Erick.pdf) by Viviane Moreira Orengo Christian Huyck.
 
-The idea of the stemmer is very weel explained in the following schema.
+The idea of the stemmer is very well explained in the following schema.
 
 ![Schema](README-schema.PNG)
 
