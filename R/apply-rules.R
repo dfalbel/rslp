@@ -1,5 +1,15 @@
 #' Apply rules
 #'
+#' @param word word to which you want to apply the rules
+#' @param name the rule name, possible values are: "Plural", "Feminine", "Adverb",
+#' "Augmentative", "Noun", "Verb", "Vowel" .
+#' @param steprules steprules as obtained from the function extract_rules.
+#'
+#' @examples
+#' steprules <- readRDS(system.file("steprules.rds", package = "nlsp"))
+#' apply_rules("balões", name = "Plural", steprules)
+#' apply_rules("lápis", name = "Plural", steprules)
+#' apply_rules("bolas", name = "Plural", steprules)
 #'
 apply_rules <- function(word, name, steprules) {
   rules <- steprules[[name]]
@@ -25,6 +35,9 @@ apply_rules <- function(word, name, steprules) {
 #' Given a list of suffixes, returns a vector of true or
 #' false indicating if the word has each one of the suffixes.
 #'
+#' @param word word you which to verify replacement rules
+#' @param rep_rules data.frame of rules as specified in steprules$replacement_rule
+#'
 verify_sufix <- function(word, rep_rules) {
   has_sufix <- stringr::str_sub(word, start = -stringr::str_length(rep_rules$sufix)) ==
     rep_rules$sufix
@@ -33,66 +46,3 @@ verify_sufix <- function(word, rep_rules) {
   is_not_exception <- sapply(rep_rules$exceptions, function(x) {!word %in% unlist(x)})
   return(has_sufix & has_min_len & is_not_exception)
 }
-
-
-apply_rules("balões", name = "Plural", steprules)
-
-#' #' Plural reduction
-#' #'
-#' #' Runs the step 1 from the RNLS algorithm.
-#' #'
-#' #' @param word
-#' #'
-#' #' @return
-#' #' word plural-reduced.
-#' #'
-#' #' @examples
-#' #' words <- c("bons", "balões", "capitães", "normais", "papéis", "casas")
-#' #' plural_reduction(words)
-#' #'
-#' #' @references
-#' #' A Stemming Algorithm for the Portuguese Language
-#' #' http://homes.dcc.ufba.br/~dclaro/download/mate04/Artigo%20Erick.pdf
-#' #'
-#' #' @rdname plural_reduction
-#' #' @export
-#' plural_reduction <- function(word){
-#'   plyr::laply(word, plural_reduction_)
-#' }
-#'
-#' #' @rdname plural_reduction
-#' #' @export
-#' plural_reduction_ <- function(word){
-#'
-#'   l <- stringr::str_length(word)
-#'   rules <- plural_reduction_rules()
-#'
-#'   for (r in 1:nrow(rules)) {
-#'
-#'     sufix <- rules$sufix[r]
-#'     minimum_stem_size <- rules$minimum_stem_size[r]
-#'     replacement <- rules$replacement[r]
-#'     len <- rules$lenght[r]
-#'
-#'     if (stringr::str_sub(word, start = -len) == sufix & (l - len) >= minimum_stem_size) {
-#'       stringr::str_sub(word, start = -len) <- replacement
-#'       break
-#'     }
-#'
-#'   }
-#'
-#'   return(word)
-#' }
-#'
-#' #' @rdname plural_reduction
-#' #' @export
-#' plural_reduction_rules <- function(){
-#'   df <- data.frame(
-#'     sufix = c("ns", "ões", "ães", "ais", "éis", "eis", "óis", "is", "les", "res", "s"),
-#'     minimum_stem_size = c(1,3,1,1,2,2,2,2,3,3,2),
-#'     replacement = c("m", "ão", "ão", "al", "el", "el", "ol", "il", "l", "r", ""),
-#'     stringsAsFactors = F
-#'   )
-#'   df$lenght <- stringr::str_length(df$sufix)
-#'   dplyr::arrange(df, dplyr::desc(lenght))
-#' }
