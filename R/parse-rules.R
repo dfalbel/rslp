@@ -1,9 +1,9 @@
 #' Extract Rules from file
 #'
-#'
+#' @export
 extract_rules <- function(){
   rules_raw <- paste(readLines("data-raw/steprules.txt"), collapse = " ")
-  rules <- extract_rules(rules)
+  rules <- extract_raw_rules(rules_raw)
   rules_proc <- extract_rules_info(rules)
   return(rules_proc)
 }
@@ -12,9 +12,8 @@ extract_rules <- function(){
 
 #' Extract raw rules
 #'
-#' @importFrom  magrittr `%>%`
 extract_raw_rules <- function(raw_rules){
-  rules <- stringr::str_extract_all(rules_raw, "\\{(.*?)\\};") %>%
+  rules <- stringr::str_extract_all(raw_rules, "\\{(.*?)\\};") %>%
     unlist()
 }
 
@@ -59,8 +58,15 @@ extract_replacement_rules <- function(raw_repl){
     exceptions = list(unlist(stringr::str_extract_all(s[4], "\\w+")))
     )
   }, .id = NULL)
-  dplyr::mutate(repl_rules,
-                min_stem_len = ifelse(is.na(min_stem_len), 0, min_stem_len),
-                replacement = ifelse(is.na(replacement), "", replacement)
-  )
+  dplyr::mutate(
+    repl_rules,
+    min_stem_len = ifelse(is.na(min_stem_len), 0, min_stem_len),
+    replacement = ifelse(is.na(replacement), "", replacement)
+  ) %>%
+    dplyr::group_by(sufix) %>%
+    dplyr::summarise(min_stem_len = max(min_stem_len),
+                     replacement = dplyr::first(replacement),
+                     exceptions = list(unlist(exceptions))
+
+    )
 }
