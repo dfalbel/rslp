@@ -1,36 +1,37 @@
-steprules <- readRDS(system.file("steprules.rds", package = "nlsp"))
 #' Apply rules
 #'
 #'
 apply_rules <- function(word, name, steprules) {
   rules <- steprules[[name]]
   word_len <- stringr::str_length(word)
-  if (word_len < rules$min_word_len) {
-    return(word)
-  } else {
-    rep_rules <- rules$replacement_rule[has_sufix(word, rules$replacement_rule$sufix),]
-    suf_len <- stringr::str_length(rep_rules$sufix)
-    for (s in order(-suf_len)) {
-      exceptions <- unlist(rep_rules$exceptions)
-      if (!word %in% exceptions) {
-        stringr::str_sub(word, start = -stringr::str_length(rep_rules$sufix[s])) <-
-          rep_rules$replacement[s]
-        return(word)
-      }
+  if (word_len >= rules$min_word_len) {
+    rep_rules <- rules$replacement_rule[verify_sufix(word, rules$replacement_rule),]
+    if (nrow(rep_rules) > 0) {
+      # select longest possible sufix
+      rep_rules <-
+        rep_rules[stringr::str_length(rep_rules$sufix) ==
+                    max(stringr::str_length(rep_rules$sufix)),
+                  ]
+      stringr::str_sub(word, start = -stringr::str_length(rep_rules$sufix[1])) <-
+        rep_rules$replacement[1]
     }
-    return(word)
   }
+  return(word)
 }
 
-#' Has sufix?
+
+#' Verify
 #'
 #' Given a list of suffixes, returns a vector of true or
 #' false indicating if the word has each one of the suffixes.
 #'
-#'
-has_sufix <- function(word, sufix){
-  suf <- stringr::str_sub(word, start = -stringr::str_length(sufix))
-  suf == sufix
+verify_sufix <- function(word, rep_rules) {
+  has_sufix <- stringr::str_sub(word, start = -stringr::str_length(rep_rules$sufix)) ==
+    rep_rules$sufix
+  has_min_len <- stringr::str_length(word) - stringr::str_length(rep_rules$sufix) >=
+    rep_rules$min_stem_len
+  is_not_exception <- sapply(rep_rules$exceptions, function(x) {!word %in% unlist(x)})
+  return(has_sufix & has_min_len & is_not_exception)
 }
 
 
