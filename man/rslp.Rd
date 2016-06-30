@@ -2,7 +2,7 @@
 % Please edit documentation in R/rslp.R
 \name{rslp}
 \alias{rslp}
-\title{RLSP}
+\title{RSLP}
 \usage{
 rslp(words, steprules = readRDS(system.file("steprules.rds", package =
   "rslp")))
