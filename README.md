@@ -5,7 +5,7 @@ RSLP
 
 > Removedor de Sufixos da Língua Portuguesa
 
-[![Travis-CI Build Status](https://travis-ci.org/dfalbel/rslp.svg?branch=master)](https://travis-ci.org/dfalbel/rslp)
+[![Travis-CI Build Status](https://travis-ci.org/dfalbel/rslp.svg?branch=master)](https://travis-ci.org/dfalbel/rslp) [![codecov](https://codecov.io/gh/dfalbel/rslp/branch/master/graph/badge.svg)](https://codecov.io/gh/dfalbel/rslp)
 
 This package uses the algorithm *Stemming Algorithm for the Portuguese Language* described in [this article](http://homes.dcc.ufba.br/~dclaro/download/mate04/Artigo%20Erick.pdf) by Viviane Moreira Orengo and Christian Huyck.
 

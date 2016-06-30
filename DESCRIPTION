@@ -12,7 +12,7 @@ Imports:
     stringr,
     plyr,
     rvest
+    magrittr
 Suggests:
     dplyr,
-    magrittr,
     testthat
