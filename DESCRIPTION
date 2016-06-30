@@ -11,7 +11,7 @@ RoxygenNote: 5.0.1
 Imports:
     stringr,
     plyr,
-    rvest
+    rvest,
     magrittr
 Suggests:
     dplyr,

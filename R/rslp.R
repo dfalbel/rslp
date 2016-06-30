@@ -8,7 +8,7 @@
 #' The default is to get the parsed versionof the rules installed with the package.
 #'
 #' @references
-#' \link{http://homes.dcc.ufba.br/~dclaro/download/mate04/Artigo%20Erick.pdf}
+#' \url{http://homes.dcc.ufba.br/~dclaro/download/mate04/Artigo%20Erick.pdf}
 #'
 #' @examples
 #' words <- c("balões", "aviões", "avião", "gostou", "gosto", "gostaram")
