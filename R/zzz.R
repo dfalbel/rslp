@@ -9,3 +9,13 @@
 #' @importFrom magrittr %>%
 #' @usage lhs \%>\% rhs
 NULL
+
+#' Remover acentos
+#'
+#' Essa função foi copiada do PTtextmining.
+#'
+remover_acentos <- function(s){
+  enc <- rvest::guess_encoding(s)
+  enc <- enc$encoding[1]
+  iconv(s, from = enc, to='ASCII//TRANSLIT')
+}
