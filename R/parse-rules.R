@@ -1,16 +1,24 @@
 #' Extract Rules from file
 #'
+#' This function parse the rules that are disponible in the RLSP package
+#' disponible in the this \link{http://www.inf.ufrgs.br/~arcoelho/rslp/integrando_rslp.html}
+#' This file has been downloaded and is installed with the package. It's path
+#' can be found using system.file("steprules.txt", package = "rlsp")
+#'
+#' @param path path to the raw steprules. Most of the times you don't have to change it.
+#'
 #' @export
-extract_rules <- function(){
-  rules_raw <- paste(readLines("data-raw/steprules.txt"), collapse = " ")
+extract_rules <- function(path = system.file("steprules.txt", package = "rlsp")){
+  rules_raw <- paste(readLines(path), collapse = " ")
   rules <- extract_raw_rules(rules_raw)
   rules_proc <- extract_rules_info(rules)
   return(rules_proc)
 }
 
 
-
 #' Extract raw rules
+#'
+#' Separate the seven kinds of rules
 #'
 extract_raw_rules <- function(raw_rules){
   rules <- stringr::str_extract_all(raw_rules, "\\{(.*?)\\};") %>%
@@ -19,6 +27,7 @@ extract_raw_rules <- function(raw_rules){
 
 #' Extract Rules Info
 #'
+#' Extract all info from all rules
 #'
 extract_rules_info <- function(rules){
   rules_p <- plyr::llply(rules, extract_rule_info)
@@ -31,6 +40,7 @@ extract_rules_info <- function(rules){
 
 #' Extract Rule Info
 #'
+#' Extract all info for one rule
 #'
 extract_rule_info <- function(rule){
   sep <- stringr::str_split_fixed(rule, ",", 4)[1,]
@@ -44,6 +54,7 @@ extract_rule_info <- function(rule){
 
 #' Extract replacement rules
 #'
+#' Parses the the raw replacement rules.
 #'
 extract_replacement_rules <- function(raw_repl){
 
