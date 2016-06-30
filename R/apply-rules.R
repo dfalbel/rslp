@@ -15,12 +15,15 @@ apply_rules <- function(word, name, steprules) {
   rules <- steprules[[name]]
   word_len <- stringr::str_length(word)
   if (word_len >= rules$min_word_len) {
-    rep_rules <- rules$replacement_rule[verify_sufix(word, rules$replacement_rule),]
+    rep_rules <- rules$replacement_rule[
+      verify_sufix(word, rules$replacement_rule) &
+        !is.na(rules$replacement_rule$sufix),
+      ]
     if (nrow(rep_rules) > 0) {
       # select longest possible sufix
       rep_rules <-
         rep_rules[stringr::str_length(rep_rules$sufix) ==
-                    max(stringr::str_length(rep_rules$sufix)),
+                    max(stringr::str_length(rep_rules$sufix), na.rm = T),
                   ]
       stringr::str_sub(word, start = -stringr::str_length(rep_rules$sufix[1])) <-
         rep_rules$replacement[1]

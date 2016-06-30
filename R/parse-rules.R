@@ -4,6 +4,8 @@
 #' disponible in the this \link{http://www.inf.ufrgs.br/~arcoelho/rslp/integrando_rslp.html}
 #' This file has been downloaded and is installed with the package. It's path
 #' can be found using system.file("steprules.txt", package = "rslp")
+#' A parsed version is saved is also installed with the package and its path
+#' can be found using system.file("steprules.rds", package = "rslp").
 #'
 #' @param path path to the raw steprules. Most of the times you don't have to change it.
 #'
