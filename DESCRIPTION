@@ -8,3 +8,9 @@ Description: This package implements the "Stemming Algorithm for the Portuguese 
 License: MIT + file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1
+Imports:
+    stringr,
+    plyr
+Suggests:
+    dplyr,
+    magrittr
