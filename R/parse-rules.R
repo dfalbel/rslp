@@ -3,12 +3,12 @@
 #' This function parse the rules that are disponible in the RLSP package
 #' disponible in the this \link{http://www.inf.ufrgs.br/~arcoelho/rslp/integrando_rslp.html}
 #' This file has been downloaded and is installed with the package. It's path
-#' can be found using system.file("steprules.txt", package = "rlsp")
+#' can be found using system.file("steprules.txt", package = "rslp")
 #'
 #' @param path path to the raw steprules. Most of the times you don't have to change it.
 #'
 #' @export
-extract_rules <- function(path = system.file("steprules.txt", package = "rlsp")){
+extract_rules <- function(path = system.file("steprules.txt", package = "rslp")){
   rules_raw <- paste(readLines(path), collapse = " ")
   rules <- extract_raw_rules(rules_raw)
   rules_proc <- extract_rules_info(rules)

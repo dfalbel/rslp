@@ -6,7 +6,7 @@
 #' @param steprules steprules as obtained from the function extract_rules.
 #'
 #' @examples
-#' steprules <- readRDS(system.file("steprules.rds", package = "nlsp"))
+#' steprules <- readRDS(system.file("steprules.rds", package = "rslp"))
 #' apply_rules("balões", name = "Plural", steprules)
 #' apply_rules("lápis", name = "Plural", steprules)
 #' apply_rules("bolas", name = "Plural", steprules)
