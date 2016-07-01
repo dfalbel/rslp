@@ -7,7 +7,8 @@
 #' @param steprules as obtained from the function extract_rules. (only define if you are certain about it).
 #' The default is to get the parsed versionof the rules installed with the package.
 #'
-#' @references \url{http://homes.dcc.ufba.br/~dclaro/download/mate04/Artigo%20Erick.pdf}
+#' @references
+#' \href{http://homes.dcc.ufba.br/~dclaro/download/mate04/Artigo Erick.pdf}{Article by Viviane Moreira Orengo and Christian Huyck}
 #'
 #' @examples
 #' words <- c("balões", "aviões", "avião", "gostou", "gosto", "gostaram")

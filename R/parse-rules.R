@@ -22,6 +22,8 @@ extract_rules <- function(path = system.file("steprules.txt", package = "rslp"))
 #'
 #' Separate the seven kinds of rules
 #'
+#' @param raw_rules a charcter with the raw rules.
+#'
 extract_raw_rules <- function(raw_rules){
   rules <- stringr::str_extract_all(raw_rules, "\\{(.*?)\\};") %>%
     unlist()
@@ -30,6 +32,8 @@ extract_raw_rules <- function(raw_rules){
 #' Extract Rules Info
 #'
 #' Extract all info from all rules
+#'
+#' @param rules rules parsed before by \link{extract_rule_info}
 #'
 extract_rules_info <- function(rules){
   rules_p <- plyr::llply(rules, extract_rule_info)
@@ -44,6 +48,8 @@ extract_rules_info <- function(rules){
 #'
 #' Extract all info for one rule
 #'
+#' @param rule the rule you want to extract infos
+#'
 extract_rule_info <- function(rule){
   sep <- stringr::str_split_fixed(rule, ",", 4)[1,]
   list(
@@ -57,6 +63,8 @@ extract_rule_info <- function(rule){
 #' Extract replacement rules
 #'
 #' Parses the the raw replacement rules.
+#'
+#' @param raw_repl the part with replacement rules for each step rule.
 #'
 extract_replacement_rules <- function(raw_repl){
 

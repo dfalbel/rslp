@@ -6,6 +6,9 @@
 \usage{
 extract_rule_info(rule)
 }
+\arguments{
+\item{rule}{the rule you want to extract infos}
+}
 \description{
 Extract all info for one rule
 }

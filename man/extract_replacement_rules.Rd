@@ -6,6 +6,9 @@
 \usage{
 extract_replacement_rules(raw_repl)
 }
+\arguments{
+\item{raw_repl}{the part with replacement rules for each step rule.}
+}
 \description{
 Parses the the raw replacement rules.
 }

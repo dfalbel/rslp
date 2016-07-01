@@ -14,8 +14,12 @@ NULL
 #'
 #' Copied from PTtextmining.
 #'
-remove_acccents <- function(s){
+#' @param s the string you want to remove accents
+#'
+remove_accents <- function(s){
   enc <- rvest::guess_encoding(s)
   enc <- enc$encoding[1]
-  iconv(s, from = enc, to='ASCII//TRANSLIT')
+  iconv(s, from = enc, to = 'ASCII//TRANSLIT')
 }
+
+globalVariables(c("min_stem_len", "replacement", "sufix", "exceptions"))

@@ -1,8 +1,8 @@
 #' Apply rules
 #'
 #' @param word word to which you want to apply the rules
-#' @param name the rule name, possible values are: "Plural", "Feminine", "Adverb",
-#' "Augmentative", "Noun", "Verb", "Vowel" .
+#' @param name the rule name, possible values are: 'Plural', 'Feminine', 'Adverb',
+#' 'Augmentative', 'Noun', 'Verb', 'Vowel' .
 #' @param steprules steprules as obtained from the function extract_rules.
 #'
 #' @examples

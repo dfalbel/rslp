@@ -6,6 +6,9 @@
 \usage{
 extract_rules_info(rules)
 }
+\arguments{
+\item{rules}{rules parsed before by \link{extract_rule_info}}
+}
 \description{
 Extract all info from all rules
 }

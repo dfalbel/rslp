@@ -22,4 +22,7 @@ words <- c("balões", "aviões", "avião", "gostou", "gosto", "gostaram")
 rslp(words)
 
 }
+\references{
+\href{http://homes.dcc.ufba.br/~dclaro/download/mate04/Artigo Erick.pdf}{Article by Viviane Moreira Orengo and Christian Huyck}
+}
 

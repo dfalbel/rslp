@@ -9,8 +9,8 @@ apply_rules(word, name, steprules)
 \arguments{
 \item{word}{word to which you want to apply the rules}
 
-\item{name}{the rule name, possible values are: "Plural", "Feminine", "Adverb",
-"Augmentative", "Noun", "Verb", "Vowel" .}
+\item{name}{the rule name, possible values are: 'Plural', 'Feminine', 'Adverb',
+'Augmentative', 'Noun', 'Verb', 'Vowel' .}
 
 \item{steprules}{steprules as obtained from the function extract_rules.}
 }

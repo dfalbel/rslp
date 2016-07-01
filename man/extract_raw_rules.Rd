@@ -6,6 +6,9 @@
 \usage{
 extract_raw_rules(raw_rules)
 }
+\arguments{
+\item{raw_rules}{a charcter with the raw rules.}
+}
 \description{
 Separate the seven kinds of rules
 }
