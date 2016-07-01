@@ -10,11 +10,11 @@
 #' @usage lhs \%>\% rhs
 NULL
 
-#' Remover acentos
+#' Remove Acccents
 #'
-#' Essa função foi copiada do PTtextmining.
+#' Copied from PTtextmining.
 #'
-remover_acentos <- function(s){
+remove_acccents <- function(s){
   enc <- rvest::guess_encoding(s)
   enc <- enc$encoding[1]
   iconv(s, from = enc, to='ASCII//TRANSLIT')

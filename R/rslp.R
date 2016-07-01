@@ -57,7 +57,7 @@ rslp_ <- function(word,
     word <- word_after_noun
   }
 
-  word <- remover_acentos(word)
+  word <- remove_accents(word)
   return(word)
 }
 
