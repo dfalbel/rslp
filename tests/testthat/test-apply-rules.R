@@ -49,7 +49,7 @@ test_that("Aumentative/Dimunutive Reduction Rules", {
   expect_equal(rslp:::apply_rules("carrinho", name = "Augmentative", steprules = steprules), "carr")
   expect_equal(rslp:::apply_rules("grandalhão", name = "Augmentative", steprules = steprules), "grand")
   expect_equal(rslp:::apply_rules("dentuça", name = "Augmentative", steprules = steprules), "dent")
-  # expect_equal(rslp:::apply_rules("ricaço", name = "Augmentative", steprules = steprules), "ric")
+  expect_equal(rslp:::apply_rules("mulheraço", name = "Augmentative", steprules = steprules), "mulher")
   expect_equal(rslp:::apply_rules("cansadão", name = "Augmentative", steprules = steprules), "cans")
   expect_equal(rslp:::apply_rules("corpázio", name = "Augmentative", steprules = steprules), "corp")
   expect_equal(rslp:::apply_rules("pratarraz", name = "Augmentative", steprules = steprules), "prat")
