@@ -4,7 +4,8 @@
 \alias{rslp_doc}
 \title{RSLP Document}
 \usage{
-rslp_doc(docs, steprules)
+rslp_doc(docs, steprules = readRDS(system.file("steprules.rds", package =
+  "rslp")))
 }
 \arguments{
 \item{docs}{chr vector of documents}

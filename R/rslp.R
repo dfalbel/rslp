@@ -43,10 +43,12 @@ rslp <- function(
 #' @references
 #' \href{http://homes.dcc.ufba.br/~dclaro/download/mate04/Artigo Erick.pdf}{Article by Viviane Moreira Orengo and Christian Huyck}
 #'
-rslp_doc <- function(docs, steprules){
+rslp_doc <- function(docs,
+                     steprules = readRDS(system.file("steprules.rds", package = "rslp"))
+){
   words <- stringr::str_extract_all(docs, "\\b[:alpha:]+\\b") %>%
     unlist %>% unique
-  words_s <- rslp(words)
+  words_s <- rslp(words, steprules = steprules)
   names(words_s) <- sprintf("\\b%s\\b", words)
   docs <- stringr::str_replace_all(docs, words_s)
   return(docs)
@@ -61,7 +63,7 @@ rslp_doc <- function(docs, steprules){
 #'
 rslp_ <- function(word,
                   steprules = readRDS(system.file("steprules.rds", package = "rslp"))
-                  ) {
+) {
 
   if (stringr::str_sub(word, start = -1) == "s") {
     word <- apply_rules(word, "Plural", steprules)
