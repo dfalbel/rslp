@@ -3,7 +3,7 @@ Type: Package
 Title: A Stemming Algorithm for the Portuguese Language
 Version: 0.0.0.9000
 Author: Daniel Falbel
-Maintainer: Danel Falbel <dfalbel@gmail.com>
+Maintainer: Daniel Falbel <dfalbel@gmail.com>
 Description: This package implements the "Stemming Algorithm for the Portuguese Language" based in the article of the same written by Viviane Moreira Orengo and Christian Huyck.
 License: MIT + file LICENSE
 LazyData: TRUE
