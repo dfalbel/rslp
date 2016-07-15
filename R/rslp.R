@@ -23,6 +23,35 @@ rslp <- function(
 }
 
 
+#' RSLP Document
+#'
+#' Apply the Stemming Algorithm for the Portuguese Language to
+#' vector of documents. It extracts words using the regex
+#' "\\b[:alpha:]\\b"
+#'
+#' @param documents chr vector of documents
+#' @param steprules as obtained from the function extract_rules. (only define if you are certain about it).
+#' The default is to get the parsed versionof the rules installed with the package.
+#'
+#' @examples
+#' docs <- c("coma frutas pois elas fazem bem para a saúde.",
+#' "não coma doces, eles fazem mal para os dentes.")
+#' rslp_doc(docs)
+#'
+#' @export
+#'
+#' @references
+#' \href{http://homes.dcc.ufba.br/~dclaro/download/mate04/Artigo Erick.pdf}{Article by Viviane Moreira Orengo and Christian Huyck}
+#'
+rslp_doc <- function(docs, steprules){
+  words <- stringr::str_extract_all(docs, "\\b[:alpha:]+\\b") %>%
+    unlist %>% unique
+  words_s <- rslp(words)
+  names(words_s) <- sprintf("\\b%s\\b", words)
+  docs <- stringr::str_replace_all(docs, words_s)
+  return(docs)
+}
+
 #' RSLP_
 #'
 #' Apply the Stemming Algorithm for the Portuguese Language to a word.

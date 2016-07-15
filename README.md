@@ -9,7 +9,7 @@ RSLP
 
 This package uses the algorithm *Stemming Algorithm for the Portuguese Language* described in [this article](http://homes.dcc.ufba.br/~dclaro/download/mate04/Artigo%20Erick.pdf) by Viviane Moreira Orengo and Christian Huyck.
 
-The idea of the stemmer is very well explained in the following schema.
+The idea of the stemmer is very well explained by the following schema.
 
 ![Schema](README-schema.PNG)
 
@@ -32,4 +32,16 @@ library(rslp)
 words <- c("balões", "aviões", "avião", "gostou", "gosto", "gostaram")
 rslp(words)
 #> [1] "bal"  "avi"  "avi"  "gost" "gost" "gost"
+```
+
+It works with vector of texts too, using the `rslp_doc` function.
+
+``` r
+docs <- c(
+  "coma frutas pois elas fazem bem para a saúde.",
+  "não coma doces, eles fazem mal para os dentes."
+  )
+rslp_doc(docs)
+#> [1] "com frut poi el faz bem par a saud."  
+#> [2] "nao com doc, ele faz mal par os dent."
 ```

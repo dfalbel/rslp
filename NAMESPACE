@@ -3,4 +3,5 @@
 export("%>%")
 export(extract_rules)
 export(rslp)
+export(rslp_doc)
 importFrom(magrittr,"%>%")
