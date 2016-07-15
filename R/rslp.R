@@ -29,7 +29,7 @@ rslp <- function(
 #' vector of documents. It extracts words using the regex
 #' "\\b[:alpha:]\\b"
 #'
-#' @param documents chr vector of documents
+#' @param docs chr vector of documents
 #' @param steprules as obtained from the function extract_rules. (only define if you are certain about it).
 #' The default is to get the parsed versionof the rules installed with the package.
 #'

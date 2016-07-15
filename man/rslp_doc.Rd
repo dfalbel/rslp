@@ -7,10 +7,10 @@
 rslp_doc(docs, steprules)
 }
 \arguments{
+\item{docs}{chr vector of documents}
+
 \item{steprules}{as obtained from the function extract_rules. (only define if you are certain about it).
 The default is to get the parsed versionof the rules installed with the package.}
-
-\item{documents}{chr vector of documents}
 }
 \description{
 Apply the Stemming Algorithm for the Portuguese Language to
