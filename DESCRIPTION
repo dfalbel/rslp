@@ -14,7 +14,8 @@ Imports:
     stringi,
     plyr,
     rvest,
-    magrittr
+    magrittr,
+    Rcpp
 Suggests:
     dplyr,
     testthat,
