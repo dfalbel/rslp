@@ -15,7 +15,8 @@ Imports:
     plyr,
     rvest,
     magrittr,
-    Rcpp
+    Rcpp,
+    xml2
 Suggests:
     dplyr,
     testthat,
