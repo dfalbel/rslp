@@ -4,7 +4,7 @@ steprules <- readRDS(system.file("steprules.rds", package = "rslp"))
 
 test_that("Plural Reduction Rules", {
   expect_equal(rslp:::apply_rules("bons", name = "Plural", steprules = steprules), "bom")
-  expect_equal(rslp:::apply_rules("balões", name = "Plural", steprules = steprules), "bal\u00e3o")
+  expect_equal(rslp:::apply_rules("bal\u00f5es", name = "Plural", steprules = steprules), "bal\u00e3o")
   expect_equal(rslp:::apply_rules("capit\u00e3es", name = "Plural", steprules = steprules), "capit\u00e3o")
   expect_equal(rslp:::apply_rules("normais", name = "Plural", steprules = steprules), "normal")
   expect_equal(rslp:::apply_rules("am\u00e1veis", name = "Plural", steprules = steprules), "am\u00e1vel")
@@ -41,7 +41,7 @@ test_that("Aumentative/Dimunutive Reduction Rules", {
   expect_equal(rslp:::apply_rules("cansad\u00edssimo", name = "Augmentative", steprules = steprules), "cansa")
   # expect_equal(rslp:::apply_rules("amabil\u00edssimo", name = "Augmentative", steprules = steprules), "ama")
   expect_equal(rslp:::apply_rules("fort\u00edssimo", name = "Augmentative", steprules = steprules), "fort")
-  expect_equal(rslp:::apply_rules("chiquérrimo", name = "Augmentative", steprules = steprules), "chiqu")
+  expect_equal(rslp:::apply_rules("chiqu\u00e9rrimo", name = "Augmentative", steprules = steprules), "chiqu")
   expect_equal(rslp:::apply_rules("pezinho", name = "Augmentative", steprules = steprules), "pe")
   expect_equal(rslp:::apply_rules("maluquinho", name = "Augmentative", steprules = steprules), "maluc")
   expect_equal(rslp:::apply_rules("amiguinho", name = "Augmentative", steprules = steprules), "amig")
