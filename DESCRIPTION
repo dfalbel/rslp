@@ -12,12 +12,9 @@ Encoding: UTF-8
 RoxygenNote: 5.0.1
 Imports:
     stringr,
-    stringi,
     plyr,
     rvest,
-    magrittr,
-    Rcpp,
-    xml2
+    magrittr
 Suggests:
     dplyr,
     testthat,

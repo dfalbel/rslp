@@ -13,6 +13,7 @@ install:
 # Adapt as necessary starting from here
 
 build_script:
+  - travis-tool.sh install_github hadley/devtools
   - travis-tool.sh install_deps
 
 test_script:
@@ -40,3 +41,6 @@ artifacts:
 
   - path: '\*_*.zip'
     name: Bits
+
+environment:
+  USE_RTOOLS: true
