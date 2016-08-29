@@ -86,6 +86,7 @@
 	{"encialista",4},
 	{"alista",5},
 	{"agem",3,"",{"coragem","chantagem","vantagem","carruagem"}},
+	{"ático", 3},
 	{"iamento",4},
 	{"amento",3,"",{"firmamento","fundamento","departamento"}},
 	{"imento",3},
