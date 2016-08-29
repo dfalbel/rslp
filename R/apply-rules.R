@@ -42,10 +42,11 @@ apply_rules <- function(word, name, steprules) {
 #' @param rep_rules data.frame of rules as specified in steprules$replacement_rule
 #'
 verify_sufix <- function(word, rep_rules) {
-  has_sufix <- stringr::str_sub(word, start = -stringr::str_length(rep_rules$sufix)) ==
+  has_sufix <- substr(rep(word, length(rep_rules$sufix)), stringr::str_length(word) - stringr::str_length(rep_rules$sufix) + 1, stringr::str_length(word)) ==
     rep_rules$sufix
   has_min_len <- stringr::str_length(word) - stringr::str_length(rep_rules$sufix) +
     stringr::str_length(rep_rules$replacement) >= rep_rules$min_stem_len
   is_not_exception <- sapply(rep_rules$exceptions, function(x) {!word %in% unlist(x)})
   return(has_sufix & has_min_len & is_not_exception)
 }
+

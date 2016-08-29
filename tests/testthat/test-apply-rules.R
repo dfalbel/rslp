@@ -115,7 +115,7 @@ test_that("Noun Reduction Rules", {
   expect_equal(rslp:::apply_rules("decorrente", name = "Noun", steprules = steprules), "decorr")
   expect_equal(rslp:::apply_rules("criminal", name = "Noun", steprules = steprules), "crim")
   expect_equal(rslp:::apply_rules("americano", name = "Noun", steprules = steprules), "americ")
-  #expect_equal(rslp:::apply_rules(escp("amável"), name = "Noun", steprules = steprules), "am")
+  expect_equal(rslp:::apply_rules("am\u00e1vel", name = "Noun", steprules = steprules), "am")
   expect_equal(rslp:::apply_rules("combust\u00edvel", name = "Noun", steprules = steprules), "combust")
   expect_equal(rslp:::apply_rules("cobertura", name = "Noun", steprules = steprules), "cobert")
   expect_equal(rslp:::apply_rules("consensual", name = "Noun", steprules = steprules), "consens")
