@@ -104,7 +104,7 @@
 	{"idor",4,"",{"ouvidor"}},
 	{"dor",4,"",{"ouvidor"}},
 	{"sor",4,"",{"assessor"}},
-	{"atoria",5},
+	{"atória",5},
 	{"tor",3,"",{"benfeitor","leitor","editor","pastor","produtor","promotor","consultor"}},
 	{"or",2,"",{"motor","melhor","redor","rigor","sensor","tambor","tumor","assessor","benfeitor","pastor","terior","favor","autor"}},
 	{"abilidade",5},
