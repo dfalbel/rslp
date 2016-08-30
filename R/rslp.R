@@ -19,7 +19,9 @@ rslp <- function(
   words,
   steprules = readRDS(system.file("steprules.rds", package = "rslp"))
 ) {
-  plyr::laply(words, rslp_, steprules = steprules)
+  res <- plyr::laply(words, rslp_, steprules = steprules)
+  attr(res,"names") <- NULL
+  return(res)
 }
 
 
