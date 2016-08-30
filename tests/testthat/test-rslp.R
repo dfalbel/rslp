@@ -78,7 +78,7 @@ test_that("rslp works fine", {
   expect_equal(rslp::rslp("gostoso"), "gost")
   expect_equal(rslp::rslp("comercializa\u00e7"), "comerci")
   expect_equal(rslp::rslp("consumismo"), "consum")
-  expect_equal(rslp::rslp("concretização"), "concre")
+  expect_equal(rslp::rslp("concretiza\u00e7\u00e3o"), "concre")
   expect_equal(rslp::rslp("alega\u00e7"), "aleg")
   expect_equal(rslp::rslp("aboli\u00e7"), "abol")
   expect_equal(rslp::rslp("anedot\u00e1rio"), "anedot")
