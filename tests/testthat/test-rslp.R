@@ -1,0 +1,16 @@
+library(rslp)
+context("rslp")
+steprules <- readRDS(system.file("steprules.rds", package = "rslp"))
+
+test_that("rslp works fine", {
+  expect_equal(rslp::rslp("bons"), "bom")
+  expect_equal(rslp::rslp("bal\u00f5es"), "bal")
+  expect_equal(rslp::rslp("capit\u00e3es"), "capita")
+  expect_equal(rslp::rslp("normais"), "norm")
+  expect_equal(rslp::rslp("am\u00e1veis"), "am")
+  expect_equal(rslp::rslp("len\u00e7\u00f3is"), "lencol")
+  expect_equal(rslp::rslp("barris"), "barril")
+  expect_equal(rslp::rslp("males"), "mal")
+  expect_equal(rslp::rslp("mares"), "mar")
+  expect_equal(rslp::rslp("casas"), "cas")
+})
