@@ -212,3 +212,9 @@ test_that("Verb Reduction Rules", {
   expect_equal(rslp:::apply_rules("chegou", name = "Verb", steprules = steprules), "cheg")
   expect_equal(rslp:::apply_rules("bebi", name = "Verb", steprules = steprules), "beb")
 })
+
+test_that("Vowel Reduction Rules", {
+  expect_equal(rslp:::apply_rules("menina", name = "Vowel", steprules = steprules), "menin")
+  expect_equal(rslp:::apply_rules("grande", name = "Vowel", steprules = steprules), "grand")
+  expect_equal(rslp:::apply_rules("menino", name = "Vowel", steprules = steprules), "menin")
+})
