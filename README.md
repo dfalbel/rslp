@@ -42,6 +42,6 @@ docs <- c(
   "não coma doces, eles fazem mal para os dentes."
   )
 rslp_doc(docs)
-#> [1] "com frut poi el faz bem par a saud."  
+#> [1] "com frut poi ela faz bem par a saud." 
 #> [2] "nao com doc, ele faz mal par os dent."
 ```
