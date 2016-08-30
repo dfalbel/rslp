@@ -190,6 +190,7 @@
 	{"iam",3,"",{"enfiam","ampliam","elogiam","ensaiam"}},{"íei",3},
 	{"imo",3,"",{"reprimo","intimo","íntimo","nimo","queimo","ximo"}},
 	{"ira",3,"",{"fronteira","sátira"}},{"ído",3},{"irá"},
+	{"irá",3},
 	{"tizar",4,"",{"alfabetizar"}},{"izar",5,"",{"organizar"}}, {"itar",5,"",{"acreditar","explicitar","estreitar"}},
 	{"ire",3,"",{"adquire"}},{"omo",3},{"ai",2},{"am",2},{"ear",4,"",{"alardear","nuclear"}},
 	{"ar",2,"",{"azar","bazaar","patamar"}},{"uei",3},{"uía",5,"u"},

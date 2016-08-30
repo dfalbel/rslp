@@ -89,5 +89,6 @@ extract_replacement_rules <- function(raw_repl){
                      replacement = dplyr::first(replacement),
                      exceptions = list(unlist(exceptions))
 
-    )
+    ) %>%
+    dplyr::filter(min_stem_len > 0)
 }
