@@ -12,14 +12,12 @@ NULL
 
 #' Remove Acccents
 #'
-#' Copied from PTtextmining.
+#' A wrappper for stringi package.
 #'
 #' @param s the string you want to remove accents
 #'
 remove_accents <- function(s){
-  enc <- rvest::guess_encoding(s)
-  enc <- enc$encoding[1]
-  iconv(s, from = enc, to = 'ASCII//TRANSLIT')
+  stringi::stri_trans_general(s, "Latin-ASCII")
 }
 
 globalVariables(c("min_stem_len", "replacement", "sufix", "exceptions"))

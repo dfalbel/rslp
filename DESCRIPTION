@@ -12,8 +12,8 @@ Encoding: UTF-8
 RoxygenNote: 5.0.1
 Imports:
     stringr,
+    stringi,
     plyr,
-    rvest,
     magrittr
 Suggests:
     dplyr,
