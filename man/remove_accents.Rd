@@ -10,6 +10,6 @@ remove_accents(s)
 \item{s}{the string you want to remove accents}
 }
 \description{
-Copied from PTtextmining.
+A wrappper for stringi package.
 }
 

@@ -7,6 +7,7 @@
 * corrected the noun reduction rule "atoria" -> "atória"
 * added a rule to remove the suffix "irá" in verb reduction
 * added a lot of tests
+* fixed a bug in `remove_accents` that was occuring in OSx
 
 # rslp 0.0.1
 
