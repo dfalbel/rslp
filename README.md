@@ -5,7 +5,7 @@ RSLP
 
 > Removedor de Sufixos da Língua Portuguesa
 
-[![Travis-CI Build Status](https://travis-ci.org/dfalbel/rslp.svg?branch=master)](https://travis-ci.org/dfalbel/rslp) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/dfalbel/rslp?branch=master&svg=true)](https://ci.appveyor.com/project/dfalbel/rslp) [![codecov](https://codecov.io/gh/dfalbel/rslp/branch/master/graph/badge.svg)](https://codecov.io/gh/dfalbel/rslp) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rslp)](https://cran.r-project.org/package=rslp) [![](http://cranlogs.r-pkg.org/badges/rslp)](http://cran.rstudio.com/web/packages/rslp/index.html)
+[![Travis-CI Build Status](https://travis-ci.org/dfalbel/rslp.svg?branch=master)](https://travis-ci.org/dfalbel/rslp) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/dfalbel/rslp?branch=master&svg=true)](https://ci.appveyor.com/project/dfalbel/rslp) [![codecov](https://codecov.io/gh/dfalbel/rslp/branch/master/graph/badge.svg)](https://codecov.io/gh/dfalbel/rslp) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rslp)](https://cran.r-project.org/package=rslp) [![](http://cranlogs.r-pkg.org/badges/rslp)](http://cran.r-project.org/web/packages/rslp/index.html)
 
 This package uses the algorithm *Stemming Algorithm for the Portuguese Language* described in [this article](http://doi.ieeecomputersociety.org/10.1109/SPIRE.2001.10024) by Viviane Moreira Orengo and Christian Huyck.
 
