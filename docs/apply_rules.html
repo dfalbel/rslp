@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>apply_rules. rslp 0.1.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html">rslp 0.1.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Apply rules</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='apply_rules.html'>apply_rules</a></span><span class="keyword">(</span><span class="symbol">word</span><span class="keyword">,</span> <span class="symbol">name</span><span class="keyword">,</span> <span class="symbol">steprules</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>word</dt>
+      <dd>word to which you want to apply the rules</dd>
+      <dt>name</dt>
+      <dd>the rule name, possible values are: &#39;Plural&#39;, &#39;Feminine&#39;, &#39;Adverb&#39;,
+&#39;Augmentative&#39;, &#39;Noun&#39;, &#39;Verb&#39;, &#39;Vowel&#39; .</dd>
+      <dt>steprules</dt>
+      <dd>steprules as obtained from the function extract_rules.</dd>
+    </dl>
+    
+    <div class="Description">
+      <h2>Description</h2>
+
+      <p>Apply rules</p>
+
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'><span class="symbol">steprules</span> <span class="assignement">&lt;-</span> <span class="functioncall"><a href='http://www.rdocumentation.org/packages/base/topics/readRDS'>readRDS</a></span><span class="keyword">(</span><span class="functioncall"><a href='http://www.rdocumentation.org/packages/devtools/topics/system.file'>system.file</a></span><span class="keyword">(</span><span class="string">"steprules.rds"</span><span class="keyword">,</span> <span class="argument">package</span> <span class="argument">=</span> <span class="string">"rslp"</span><span class="keyword">)</span><span class="keyword">)</span>
+<span class="package">rslp</span><span class="keyword">:::</span><span class="functioncall"><a href='apply_rules.html'>apply_rules</a></span><span class="keyword">(</span><span class="string">"balões"</span><span class="keyword">,</span> <span class="argument">name</span> <span class="argument">=</span> <span class="string">"Plural"</span><span class="keyword">,</span> <span class="symbol">steprules</span><span class="keyword">)</span></div>
+<div class='output'>[1] &quot;balão&quot;
+</div>
+<div class='input'><span class="package">rslp</span><span class="keyword">:::</span><span class="functioncall"><a href='apply_rules.html'>apply_rules</a></span><span class="keyword">(</span><span class="string">"lápis"</span><span class="keyword">,</span> <span class="argument">name</span> <span class="argument">=</span> <span class="string">"Plural"</span><span class="keyword">,</span> <span class="symbol">steprules</span><span class="keyword">)</span></div>
+<div class='output'>[1] &quot;lápis&quot;
+</div>
+<div class='input'><span class="package">rslp</span><span class="keyword">:::</span><span class="functioncall"><a href='apply_rules.html'>apply_rules</a></span><span class="keyword">(</span><span class="string">"bolas"</span><span class="keyword">,</span> <span class="argument">name</span> <span class="argument">=</span> <span class="string">"Plural"</span><span class="keyword">,</span> <span class="symbol">steprules</span><span class="keyword">)</span></div>
+<div class='output'>[1] &quot;bola&quot;
+</div>
+<div class='input'></div></pre>
+  </div>
+  <div class="span4 sidebar">
+    <!-- <ul>
+      <li>apply_rules</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+
+
+
+
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="https://getbootstrap.com/2.0.4/">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Home. rslp 0.1.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Daniel Falbel">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html">rslp 0.1.0</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <div class="row">
+  <div class="span8">
+    <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<h1>RSLP</h1>
+
+<blockquote>
+<p>Removedor de Sufixos da Língua Portuguesa</p>
+</blockquote>
+
+<p><a href="https://travis-ci.org/dfalbel/rslp"><img src="https://travis-ci.org/dfalbel/rslp.svg?branch=master" alt="Travis-CI Build Status"/></a> <a href="https://ci.appveyor.com/project/dfalbel/rslp"><img src="https://ci.appveyor.com/api/projects/status/github/dfalbel/rslp?branch=master&amp;svg=true" alt="AppVeyor Build Status"/></a> <a href="https://codecov.io/gh/dfalbel/rslp"><img src="https://codecov.io/gh/dfalbel/rslp/branch/master/graph/badge.svg" alt="codecov"/></a> <a href="https://cran.r-project.org/package=rslp"><img src="http://www.r-pkg.org/badges/version/rslp" alt="CRAN\_Status\_Badge"/></a> <a href="http://cran.r-project.org/web/packages/rslp/index.html"><img src="http://cranlogs.r-pkg.org/badges/rslp" alt=""/></a></p>
+
+<p>This package uses the algorithm <em>Stemming Algorithm for the Portuguese Language</em> described in <a href="http://doi.ieeecomputersociety.org/10.1109/SPIRE.2001.10024">this article</a> by Viviane Moreira Orengo and Christian Huyck.</p>
+
+<p>The idea of the stemmer is very well explained by the following schema.</p>
+
+<p><img src="README-schema.PNG" alt="Schema"/></p>
+
+<h2>Installing</h2>
+
+<p>To install the package you can use the following:</p>
+
+<pre><code class="r">devtools::install_github(&quot;dfalbel/rslp&quot;)
+</code></pre>
+
+<h2>Using</h2>
+
+<p>The only important function of the package is the <code>rslp</code> function. You can call it on a vector of characters like this:</p>
+
+<pre><code class="r">library(rslp)
+words &lt;- c(&quot;balões&quot;, &quot;aviões&quot;, &quot;avião&quot;, &quot;gostou&quot;, &quot;gosto&quot;, &quot;gostaram&quot;)
+rslp(words)
+#&gt; [1] &quot;bal&quot;  &quot;avi&quot;  &quot;avi&quot;  &quot;gost&quot; &quot;gost&quot; &quot;gost&quot;
+</code></pre>
+
+<p>It works with vector of texts too, using the <code>rslp_doc</code> function.</p>
+
+<pre><code class="r">docs &lt;- c(
+  &quot;coma frutas pois elas fazem bem para a saúde.&quot;,
+  &quot;não coma doces, eles fazem mal para os dentes.&quot;
+  )
+rslp_doc(docs)
+#&gt; [1] &quot;com frut poi ela faz bem par a saud.&quot; 
+#&gt; [2] &quot;nao com doc, ele faz mal par os dent.&quot;
+</code></pre>
+
+  </div>
+
+  <div class="span3 offset1 sidebar">
+        <h2>Authors</h2>
+    <ul>
+    </ul>
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="https://getbootstrap.com/2.0.4/">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
