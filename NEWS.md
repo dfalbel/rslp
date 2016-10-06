@@ -1,3 +1,8 @@
+# rslp 0.1.1
+* fix link in readme
+* use athours@R syntax in description
+* new website using pkgdown package
+
 # rslp 0.1.0
 
 * `rslp` is now returning a character vector without names

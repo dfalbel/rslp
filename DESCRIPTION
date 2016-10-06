@@ -1,7 +1,7 @@
 Package: rslp
 Type: Package
 Title: A Stemming Algorithm for the Portuguese Language
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: person("Daniel", "Falbel", email = "dfalbel@gmail.com",
                   role = c("aut", "cre"))
 Maintainer: Daniel Falbel <dfalbel@gmail.com>
