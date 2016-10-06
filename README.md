@@ -11,7 +11,7 @@ This package uses the algorithm *Stemming Algorithm for the Portuguese Language*
 
 The idea of the stemmer is very well explained by the following schema.
 
-![Schema](README-schema.PNG)
+![Schema](https://raw.githubusercontent.com/dfalbel/rslp/master/README-schema.PNG)
 
 Installing
 ----------
