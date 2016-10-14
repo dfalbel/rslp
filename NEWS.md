@@ -2,6 +2,7 @@
 * fix link in readme
 * use athours@R syntax in description
 * new website using pkgdown package
+* use tokenizers package
 
 # rslp 0.1.0
 

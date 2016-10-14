@@ -48,7 +48,7 @@ rslp <- function(
 rslp_doc <- function(docs,
                      steprules = readRDS(system.file("steprules.rds", package = "rslp"))
 ){
-  words <- stringr::str_extract_all(docs, "\\b[:alpha:]+\\b") %>%
+  words <- tokenizers::tokenize_words(docs) %>%
     unlist %>% unique
   words_s <- rslp(words, steprules = steprules)
   names(words_s) <- sprintf("\\b%s\\b", words)
