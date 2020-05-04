@@ -12,7 +12,7 @@
 #' rslp:::apply_rules("bolas", name = "Plural", steprules)
 #'
 apply_rules <- function(word, name, steprules) {
-  word <- stringi::stri_enc_toutf8(word)
+  #word <- stringi::stri_enc_toutf8(word)
   rules <- steprules[[name]]
   word_len <- stringr::str_length(word)
   if (word_len >= rules$min_word_len) {
