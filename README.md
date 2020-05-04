@@ -1,20 +1,30 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-RSLP
-====
+
+# RSLP
 
 > Removedor de Sufixos da Língua Portuguesa
 
-[![Travis-CI Build Status](https://travis-ci.org/dfalbel/rslp.svg?branch=master)](https://travis-ci.org/dfalbel/rslp) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/dfalbel/rslp?branch=master&svg=true)](https://ci.appveyor.com/project/dfalbel/rslp) [![codecov](https://codecov.io/gh/dfalbel/rslp/branch/master/graph/badge.svg)](https://codecov.io/gh/dfalbel/rslp) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rslp)](https://cran.r-project.org/package=rslp) [![](http://cranlogs.r-pkg.org/badges/rslp)](http://cran.r-project.org/web/packages/rslp/index.html)
+[![R build
+status](https://github.com/dfalbel/rslp/workflows/R-CMD-check/badge.svg)](https://github.com/dfalbel/rslp/actions)
+[![Travis-CI Build
+Status](https://travis-ci.org/dfalbel/rslp.svg?branch=master)](https://travis-ci.org/dfalbel/rslp)
+[![AppVeyor Build
+Status](https://ci.appveyor.com/api/projects/status/github/dfalbel/rslp?branch=master&svg=true)](https://ci.appveyor.com/project/dfalbel/rslp)
+[![codecov](https://codecov.io/gh/dfalbel/rslp/branch/master/graph/badge.svg)](https://codecov.io/gh/dfalbel/rslp)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rslp)](https://cran.r-project.org/package=rslp)
+[![](http://cranlogs.r-pkg.org/badges/rslp)](http://cran.r-project.org/web/packages/rslp/index.html)
 
-This package uses the algorithm *Stemming Algorithm for the Portuguese Language* described in [this article](http://doi.ieeecomputersociety.org/10.1109/SPIRE.2001.10024) by Viviane Moreira Orengo and Christian Huyck.
+This package uses the algorithm *Stemming Algorithm for the Portuguese
+Language* described in [this
+article](http://doi.ieeecomputersociety.org/10.1109/SPIRE.2001.10024) by
+Viviane Moreira Orengo and Christian Huyck.
 
 The idea of the stemmer is very well explained by the following schema.
 
 ![Schema](https://raw.githubusercontent.com/dfalbel/rslp/master/README-schema.PNG)
 
-Installing
-----------
+## Installing
 
 To install the package you can use the following:
 
@@ -22,10 +32,10 @@ To install the package you can use the following:
 devtools::install_github("dfalbel/rslp")
 ```
 
-Using
------
+## Using
 
-The only important function of the package is the `rslp` function. You can call it on a vector of characters like this:
+The only important function of the package is the `rslp` function. You
+can call it on a vector of characters like this:
 
 ``` r
 library(rslp)
