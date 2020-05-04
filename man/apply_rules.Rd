@@ -24,4 +24,3 @@ rslp:::apply_rules("lápis", name = "Plural", steprules)
 rslp:::apply_rules("bolas", name = "Plural", steprules)
 
 }
-

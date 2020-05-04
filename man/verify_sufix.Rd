@@ -15,4 +15,3 @@ verify_sufix(word, rep_rules)
 Given a list of suffixes, returns a vector of true or
 false indicating if the word has each one of the suffixes.
 }
-

@@ -4,8 +4,10 @@
 \alias{rslp_}
 \title{RSLP_}
 \usage{
-rslp_(word, steprules = readRDS(system.file("steprules.rds", package =
-  "rslp")))
+rslp_(
+  word,
+  steprules = readRDS(system.file("steprules.rds", package = "rslp"))
+)
 }
 \arguments{
 \item{word}{word to be stemmed.}
@@ -15,4 +17,3 @@ rslp_(word, steprules = readRDS(system.file("steprules.rds", package =
 \description{
 Apply the Stemming Algorithm for the Portuguese Language to a word.
 }
-

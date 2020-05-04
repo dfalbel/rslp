@@ -12,4 +12,3 @@ extract_replacement_rules(raw_repl)
 \description{
 Parses the the raw replacement rules.
 }
-

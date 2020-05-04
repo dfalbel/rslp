@@ -4,8 +4,10 @@
 \alias{rslp_doc}
 \title{RSLP Document}
 \usage{
-rslp_doc(docs, steprules = readRDS(system.file("steprules.rds", package =
-  "rslp")))
+rslp_doc(
+  docs,
+  steprules = readRDS(system.file("steprules.rds", package = "rslp"))
+)
 }
 \arguments{
 \item{docs}{chr vector of documents}
@@ -27,4 +29,3 @@ rslp_doc(docs)
 \references{
 V. Orengo, C. Huyck, "A Stemming Algorithmm for the Portuguese Language", SPIRE, 2001, String Processing and Information Retrieval, International Symposium on, String Processing and Information Retrieval, International Symposium on 2001, pp. 0186, doi:10.1109/SPIRE.2001.10024
 }
-

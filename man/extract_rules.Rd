@@ -11,10 +11,9 @@ extract_rules(path = system.file("steprules.txt", package = "rslp"))
 }
 \description{
 This function parse the rules that are disponible in the RLSP package
-disponible in the this \url{http://www.inf.ufrgs.br/~arcoelho/rslp/integrando_rslp.html}
+disponible in the RSLP C source.
 This file has been downloaded and is installed with the package. It's path
 can be found using system.file("steprules.txt", package = "rslp")
 A parsed version is saved is also installed with the package and its path
 can be found using system.file("steprules.rds", package = "rslp").
 }
-
