@@ -5,13 +5,9 @@
 #' 'Augmentative', 'Noun', 'Verb', 'Vowel' .
 #' @param steprules steprules as obtained from the function extract_rules.
 #'
-#' @examples
-#' steprules <- readRDS(system.file("steprules.rds", package = "rslp"))
-#' rslp:::apply_rules("balões", name = "Plural", steprules)
-#' rslp:::apply_rules("lápis", name = "Plural", steprules)
-#' rslp:::apply_rules("bolas", name = "Plural", steprules)
 #'
 apply_rules <- function(word, name, steprules) {
+  #word <- stringi::stri_enc_toutf8(word)
   rules <- steprules[[name]]
   word_len <- stringr::str_length(word)
   if (word_len >= rules$min_word_len) {

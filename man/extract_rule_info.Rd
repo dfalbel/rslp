@@ -12,4 +12,3 @@ extract_rule_info(rule)
 \description{
 Extract all info for one rule
 }
-

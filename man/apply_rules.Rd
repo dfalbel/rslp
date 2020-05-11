@@ -17,11 +17,3 @@ apply_rules(word, name, steprules)
 \description{
 Apply rules
 }
-\examples{
-steprules <- readRDS(system.file("steprules.rds", package = "rslp"))
-rslp:::apply_rules("balões", name = "Plural", steprules)
-rslp:::apply_rules("lápis", name = "Plural", steprules)
-rslp:::apply_rules("bolas", name = "Plural", steprules)
-
-}
-

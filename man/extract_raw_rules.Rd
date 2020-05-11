@@ -12,4 +12,3 @@ extract_raw_rules(raw_rules)
 \description{
 Separate the seven kinds of rules
 }
-

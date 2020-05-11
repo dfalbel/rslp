@@ -4,14 +4,16 @@
 \alias{rslp_doc}
 \title{RSLP Document}
 \usage{
-rslp_doc(docs, steprules = readRDS(system.file("steprules.rds", package =
-  "rslp")))
+rslp_doc(
+  docs,
+  steprules = readRDS(system.file("steprules.rds", package = "rslp"))
+)
 }
 \arguments{
 \item{docs}{chr vector of documents}
 
 \item{steprules}{as obtained from the function extract_rules. (only define if you are certain about it).
-The default is to get the parsed versionof the rules installed with the package.}
+The default is to get the parsed version of the rules installed with the package.}
 }
 \description{
 Apply the Stemming Algorithm for the Portuguese Language to
@@ -19,12 +21,10 @@ vector of documents. It extracts words using the regex
 "\\b[:alpha:]\\b"
 }
 \examples{
-docs <- c("coma frutas pois elas fazem bem para a saúde.",
-"não coma doces, eles fazem mal para os dentes.")
+docs <- c("coma frutas pois elas fazem bem para.")
 rslp_doc(docs)
 
 }
 \references{
 V. Orengo, C. Huyck, "A Stemming Algorithmm for the Portuguese Language", SPIRE, 2001, String Processing and Information Retrieval, International Symposium on, String Processing and Information Retrieval, International Symposium on 2001, pp. 0186, doi:10.1109/SPIRE.2001.10024
 }
-

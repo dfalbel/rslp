@@ -4,8 +4,10 @@
 \alias{rslp}
 \title{RSLP}
 \usage{
-rslp(words, steprules = readRDS(system.file("steprules.rds", package =
-  "rslp")))
+rslp(
+  words,
+  steprules = readRDS(system.file("steprules.rds", package = "rslp"))
+)
 }
 \arguments{
 \item{words}{vector of words that you want to stem.}
@@ -18,11 +20,10 @@ Apply the Stemming Algorithm for the Portuguese Language to
 vector of words.
 }
 \examples{
-words <- c("balões", "aviões", "avião", "gostou", "gosto", "gostaram")
+words <- c("gostou", "gosto", "gostaram")
 rslp(words)
 
 }
 \references{
 V. Orengo, C. Huyck, "A Stemming Algorithmm for the Portuguese Language", SPIRE, 2001, String Processing and Information Retrieval, International Symposium on, String Processing and Information Retrieval, International Symposium on 2001, pp. 0186, doi:10.1109/SPIRE.2001.10024
 }
-

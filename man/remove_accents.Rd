@@ -12,4 +12,3 @@ remove_accents(s)
 \description{
 A wrappper for stringi package.
 }
-

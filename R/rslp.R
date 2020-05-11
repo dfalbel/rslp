@@ -11,7 +11,7 @@
 #' V. Orengo, C. Huyck, "A Stemming Algorithmm for the Portuguese Language", SPIRE, 2001, String Processing and Information Retrieval, International Symposium on, String Processing and Information Retrieval, International Symposium on 2001, pp. 0186, doi:10.1109/SPIRE.2001.10024
 #'
 #' @examples
-#' words <- c("balões", "aviões", "avião", "gostou", "gosto", "gostaram")
+#' words <- c("gostou", "gosto", "gostaram")
 #' rslp(words)
 #'
 #' @export
@@ -33,11 +33,10 @@ rslp <- function(
 #'
 #' @param docs chr vector of documents
 #' @param steprules as obtained from the function extract_rules. (only define if you are certain about it).
-#' The default is to get the parsed versionof the rules installed with the package.
+#' The default is to get the parsed version of the rules installed with the package.
 #'
 #' @examples
-#' docs <- c("coma frutas pois elas fazem bem para a saúde.",
-#' "não coma doces, eles fazem mal para os dentes.")
+#' docs <- c("coma frutas pois elas fazem bem para.")
 #' rslp_doc(docs)
 #'
 #' @export
