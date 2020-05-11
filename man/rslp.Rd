@@ -20,7 +20,7 @@ Apply the Stemming Algorithm for the Portuguese Language to
 vector of words.
 }
 \examples{
-words <- c("balões", "aviões", "avião", "gostou", "gosto", "gostaram")
+words <- c("gostou", "gosto", "gostaram")
 rslp(words)
 
 }
