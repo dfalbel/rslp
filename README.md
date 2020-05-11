@@ -13,7 +13,7 @@ Status](https://travis-ci.org/dfalbel/rslp.svg?branch=master)](https://travis-ci
 Status](https://ci.appveyor.com/api/projects/status/github/dfalbel/rslp?branch=master&svg=true)](https://ci.appveyor.com/project/dfalbel/rslp)
 [![codecov](https://codecov.io/gh/dfalbel/rslp/branch/master/graph/badge.svg)](https://codecov.io/gh/dfalbel/rslp)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rslp)](https://cran.r-project.org/package=rslp)
-[![](http://cranlogs.r-pkg.org/badges/rslp)](http://cran.r-project.org/web/packages/rslp/index.html)
+[![](http://cranlogs.r-pkg.org/badges/rslp)](https://CRAN.R-project.org/package=rslp)
 
 This package uses the algorithm *Stemming Algorithm for the Portuguese
 Language* described in [this
